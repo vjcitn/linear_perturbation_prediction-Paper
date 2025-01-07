@@ -11,9 +11,18 @@
 # make sure conda is on PATH
 #~/.cache/R/basilisk/1.19.0/0/bin/conda activate gears_env2
 
-python3 src/prepare_perturbation_data.py \
-  --dataset_name adamson \
-  --seed 1 \
-  --working_dir ./working_dir \
-  --result_id seed_1_adamson_split
+#python3 src/prepare_perturbation_data.py \
+#  --dataset_name adamson \
+#  --seed 1 \
+#  --working_dir ./working_dir \
+#  --result_id seed_1_adamson_split
+
+Rscr --no-restore src/run_linear_pretrained_model.R \
+    --dataset_name adamson \
+    --test_train_config_id seed_1_adamson_split \
+    --pca_dim 10 \
+    --gene_embedding training_data \
+    --pert_embedding training_data \
+    --working_dir ./working_dir \
+    --result_id linear_results
 
