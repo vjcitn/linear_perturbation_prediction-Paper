@@ -1,6 +1,19 @@
 # This could be anywhere 
-mkdir ./working_dir
-mkdir ./working_dir/results
-mkdir -p ./data/gears_pert_data
+#mkdir ./working_dir
+#mkdir ./working_dir/results
+#mkdir -p ./data/gears_pert_data
 
-~/Library/Caches/org*R/R/basilisk/1.18.0/0/condabin/conda env create --file conda_environments/gears_env2-environment.yml
+#~/Library/Caches/org*R/R/basilisk/1.18.0/0/condabin/conda env create --file conda_environments/gears_env2-environment.yml
+#~/.cache/R/basilisk/1.19.0/0/bin/conda env create --file conda_environments/gears_env2-environment.yml
+
+#conda activate gears_env2
+#~/.cache/R/basilisk/1.19.0/0/bin/conda init
+# make sure conda is on PATH
+#~/.cache/R/basilisk/1.19.0/0/bin/conda activate gears_env2
+
+python3 src/prepare_perturbation_data.py \
+  --dataset_name adamson \
+  --seed 1 \
+  --working_dir ./working_dir \
+  --result_id seed_1_adamson_split
+
