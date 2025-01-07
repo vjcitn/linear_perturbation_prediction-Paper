@@ -1,0 +1,6 @@
+# This could be anywhere 
+mkdir ./working_dir
+mkdir ./working_dir/results
+mkdir -p ./data/gears_pert_data
+
+~/Library/Caches/org*R/R/basilisk/1.18.0/0/condabin/conda env create --file conda_environments/gears_env2-environment.yml
